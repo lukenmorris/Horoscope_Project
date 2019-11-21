@@ -58,11 +58,3 @@ a:hover{
     border-bottom: solid 1px white;
 }
 
-/* FOOTER */
-.footer {
-    margin: 0;
-    position: absolute;
-    width: 100%;
-    background-color: navy;
-    color: white;
-}

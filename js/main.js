@@ -16,6 +16,7 @@ var definition = {
 
 //function triggered by button
 function signs() {
+	var name = document.getElementById("name").value;
 	var day = document.getElementById("birthday").value;
 	var month = document.getElementById("birthmonth").value;
 	var symbol = day + month;
@@ -90,5 +91,5 @@ function signs() {
 
 		zodiac = symbol;
 		console.log(zodiac);
-		h4.innerHTML = "Your sign is " + zodiac;
+		h4.innerHTML = "Hello " + name + ", your sign is " + zodiac + ".";
 }

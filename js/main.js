@@ -13,8 +13,6 @@ var definition = {
 	"Pisces":"Right now you could be thinking about spiritual matters. Maybe you will be inspired by something that you hear at a church service. Or you could be doing some reading that provokes some deep thought. You might even be triggered into analyzing a relationship with a family member. This is a good day for you to sort some things out and do your best to heal a challenging personal situation. <a href=\"https://horoscopes-and-astrology.com/Pisces\" alt=\"Pisces\" target=\"_blank\"> <i>Read more...</i></a>"
 };
 
-
-//function triggered by button
 function signs() {
 	var name = document.getElementById("name").value;
 	var day = document.getElementById("birthday").value;
@@ -32,6 +30,9 @@ function signs() {
 			document.getElementById("symbol").src = "img/aquarius.png";
 			x = definition.Aquarius;
 			document.getElementById("daily-horoscope").innerHTML = x;
+        } else if (month == 2 && day >28) {
+            x = definition.Error;
+            document.getElementById("daily-horoscope").innerHTML = x;
 		} else if (month == 2 && day >=19 || month == 3 && day <=20) {
 			symbol = "Pisces";
 			document.getElementById("symbol").src = "img/pisces.png";
@@ -91,5 +92,10 @@ function signs() {
 
 		zodiac = symbol;
 		console.log(zodiac);
-		h4.innerHTML = "Hello " + name + ", your sign is " + zodiac + ".";
+
+    if (month == 2 && day >28) {
+        h4.innerHTML = "Hello, unfortunately this is not a valid date of birth. Please try again."
+    } else {
+        h4.innerHTML = "Hello " + name + ", your sign is " + zodiac + ".";
+    }
 }

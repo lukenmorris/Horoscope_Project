@@ -20,8 +20,8 @@ function signs() {
 	var symbol = day + month;
 	var zodiac = symbol;
 
-    let h3 = document.querySelector('h3');
-    let h4 = document.querySelector('h4');
+    var h3 = document.querySelector('h3');
+    var h4 = document.querySelector('h4');
 
 	h3.innerHTML = "Your Birthday: " + month + "/" + day;
 

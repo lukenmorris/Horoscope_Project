@@ -44,7 +44,7 @@ a:hover{
 /* TOP OF PAGE */
 .jumbotron {
     background: transparent;
-    border-bottom: solid 1px white;
+    border-bottom: solid 1px transparent;
 }
 
 /* ZODIAC SIGN */
@@ -54,6 +54,6 @@ a:hover{
 
 /* SIGN HEADER */
 #userinfo {
-    border-bottom: solid 1px white;
+    border-bottom: solid 1px transparent;
 }
 

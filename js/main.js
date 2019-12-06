@@ -26,7 +26,7 @@ function signs() {
     h3.innerHTML = "Your Birthday: " + month + "/" + day;
     if (month == 0 && day == 0) {
         alert("Error: No birthday input.");
-        return false
+        return false;
     } else if (month == 1 && day >= 20 || month == 2 && day <= 18) {
         symbol = "Aquarius";
         document.getElementById("symbol").src = "img/aquarius.png";

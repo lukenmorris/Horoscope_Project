@@ -24,7 +24,7 @@ function signs() {
     var h4 = document.querySelector('h4');
 
     h3.innerHTML = "Your Birthday: " + month + "/" + day;
-    if (month == x || day == x) {
+    if (month == X || day == X) {
         alert("Error: No birthday input.");
         return false
     } else if (month == 1 && day >= 20 || month == 2 && day <= 18) {

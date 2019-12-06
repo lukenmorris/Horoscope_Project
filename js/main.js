@@ -24,8 +24,9 @@ function signs() {
     var h4 = document.querySelector('h4');
 
     h3.innerHTML = "Your Birthday: " + month + "/" + day;
-    if (month == 0 && day == 0) {
-        alert("Error: No birthday input.");
+    if (month == 0 || day == 0 || name == '') {
+        alert("Error: All fields must be filled out. Please try again.");
+        h3.innerHTML = "";
         return false;
     } else if (month == 1 && day >= 20 || month == 2 && day <= 18) {
         symbol = "Aquarius";

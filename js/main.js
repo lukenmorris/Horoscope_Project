@@ -10,7 +10,8 @@ var definition = {
     "Sagittarius": "Intellect combines with intuition today to produce a particularly enlightening day on all subjects that interest you, whether they be intellectual, practical, or metaphysical. Group activities dedicated to these subjects could prove extremely rewarding, especially if you go with a friend. You could meet some new people whom you are almost certain you recognize, perhaps from a past life, and you might want to explore this possibility. <a href=\"https://horoscopes-and-astrology.com/Sagittarius\" alt=\"Sagittatius\" target=\"_blank\"> <i>Read more...</i></a>",
     "Capricorn": "Today you might decide to put yourself in charge of something. If you are a member of a church group, perhaps you will decide to become the head of a charity drive. You could collect donations from people and organize other volunteers. You'll enjoy being in a command of a worthy project. Try to find a positive way of using your leadership talents. You have many gifts that you can share with others. <a href=\"https://horoscopes-and-astrology.com/Capricorn\" alt=\"Capricon\" target=\"_blank\"> <i>Read more...</i></a>",
     "Aquarius": "Social events are likely to put you in touch with some attractive and exciting people. Stimulating discussions could take place, which set your mind whirling even more than it usually does. Some interesting books could be recommended. You'll want to take the names and phone numbers of some of those whom you meet today, so make sure you have a notebook with you when you go out. Have a great day! <a href=\"https://horoscopes-and-astrology.com/Aquarius\" alt=\"Aquarius\" target=\"_blank\"> <i>Read more...</i></a>",
-    "Pisces": "Right now you could be thinking about spiritual matters. Maybe you will be inspired by something that you hear at a church service. Or you could be doing some reading that provokes some deep thought. You might even be triggered into analyzing a relationship with a family member. This is a good day for you to sort some things out and do your best to heal a challenging personal situation. <a href=\"https://horoscopes-and-astrology.com/Pisces\" alt=\"Pisces\" target=\"_blank\"> <i>Read more...</i></a>"
+    "Pisces": "Right now you could be thinking about spiritual matters. Maybe you will be inspired by something that you hear at a church service. Or you could be doing some reading that provokes some deep thought. You might even be triggered into analyzing a relationship with a family member. This is a good day for you to sort some things out and do your best to heal a challenging personal situation. <a href=\"https://horoscopes-and-astrology.com/Pisces\" alt=\"Pisces\" target=\"_blank\"> <i>Read more...</i></a>",
+    "Birthday": "Happy Birthday! Today you can expect good luck and fortune. Try to connect with others and appreciate your anniversary of your birth on Earth!"
 };
 
 function signs() {
@@ -19,6 +20,9 @@ function signs() {
     var month = document.getElementById("birthmonth").value;
     var symbol = day + month;
     var zodiac = symbol;
+    var dateObj = new Date();
+    var birthmonth = dateObj.getUTCMonth() + 1; //months from 1-12
+    var birthday = dateObj.getUTCDate();
 
     var h3 = document.querySelector('h3');
     var h4 = document.querySelector('h4');
@@ -28,6 +32,11 @@ function signs() {
         alert("Error: All fields must be filled out. Please try again.");
         h3.innerHTML = "";
         return false;
+    } else if (month == birthmonth && day == birthday) {
+        symbol = "Birthday";
+        document.getElementById("symbol").src = "img/birthday.png";
+        x = definition.Birthday;
+        document.getElementById("daily-horoscope").innerHTML = x;
     } else if (month == 1 && day >= 20 || month == 2 && day <= 18) {
         symbol = "Aquarius";
         document.getElementById("symbol").src = "img/aquarius.png";
@@ -98,6 +107,8 @@ function signs() {
 
     if (month == 2 && day > 28) {
         h4.innerHTML = "Hello, unfortunately this is not a valid date of birth. Please try again."
+    } else if (month == birthmonth && day == birthday) {
+        h4.innerHTML = "Happy Birthday " + name + "!";
     } else {
         h4.innerHTML = "Hello " + name + ", your sign is " + zodiac + ".";
     }

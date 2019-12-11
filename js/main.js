@@ -20,7 +20,6 @@ function signs() {
     var day = document.getElementById("birthday").value;
     var month = document.getElementById("birthmonth").value;
     var symbol = day + month;
-    var zodiac = symbol;
     var dateObj = new Date();
     var birthmonth = dateObj.getUTCMonth() + 1; //months from 1-12
     var birthday = dateObj.getUTCDate();
@@ -37,74 +36,73 @@ function signs() {
         symbol = "Birthday";
         document.getElementById("symbol").src = "img/birthday.png";
         x = definition.Birthday;
-        document.getElementById("daily-horoscope").innerHTML = x;
+        document.getElementById("horoscope").innerHTML = x;
     } else if (month == 1 && day >= 20 || month == 2 && day <= 18) {
         symbol = "Aquarius";
         document.getElementById("symbol").src = "img/aquarius.png";
         x = definition.Aquarius;
-        document.getElementById("daily-horoscope").innerHTML = x;
+        document.getElementById("horoscope").innerHTML = x;
     } else if (month == 2 && day > 28) {
         x = definition.Error;
-        document.getElementById("daily-horoscope").innerHTML = x;
+        document.getElementById("horoscope").innerHTML = x;
     } else if (month == 2 && day >= 19 || month == 3 && day <= 20) {
         symbol = "Pisces";
         document.getElementById("symbol").src = "img/pisces.png";
         x = definition.Pisces;
-        document.getElementById("daily-horoscope").innerHTML = x;
+        document.getElementById("horoscope").innerHTML = x;
     } else if (month == 3 && day >= 21 || month == 4 && day <= 19) {
         symbol = "Aries";
         document.getElementById("symbol").src = "img/aries.png";
         x = definition.Aries;
-        document.getElementById("daily-horoscope").innerHTML = x;
+        document.getElementById("horoscope").innerHTML = x;
     } else if (month == 4 && day >= 20 || month == 5 && day <= 20) {
         symbol = "Taurus";
         document.getElementById("symbol").src = "img/taurus.png";
         x = definition.Taurus;
-        document.getElementById("daily-horoscope").innerHTML = x;
+        document.getElementById("horoscope").innerHTML = x;
     } else if (month == 5 && day >= 21 || month == 6 && day <= 21) {
         symbol = "Gemini";
         document.getElementById("symbol").src = "img/gemini.png";
         x = definition.Gemini;
-        document.getElementById("daily-horoscope").innerHTML = x;
+        document.getElementById("horoscope").innerHTML = x;
     } else if (month == 6 && day >= 22 || month == 7 && day <= 22) {
         symbol = "Cancer";
         document.getElementById("symbol").src = "img/cancer.png";
         x = definition.Cancer;
-        document.getElementById("daily-horoscope").innerHTML = x;
+        document.getElementById("horoscope").innerHTML = x;
     } else if (month == 7 && day >= 23 || month == 8 && day <= 22) {
         symbol = "Leo";
         document.getElementById("symbol").src = "img/leo.png";
         x = definition.Leo;
-        document.getElementById("daily-horoscope").innerHTML = x;
+        document.getElementById("horoscope").innerHTML = x;
     } else if (month == 8 && day >= 23 || month == 9 && day <= 22) {
         symbol = "Virgo";
         document.getElementById("symbol").src = "img/virgo.png";
         x = definition.Virgo;
-        document.getElementById("daily-horoscope").innerHTML = x;
+        document.getElementById("horoscope").innerHTML = x;
     } else if (month == 9 && day >= 23 || month == 10 && day <= 22) {
         symbol = "Libra";
         document.getElementById("symbol").src = "img/libra.png";
         x = definition.Libra;
-        document.getElementById("daily-horoscope").innerHTML = x;
+        document.getElementById("horoscope").innerHTML = x;
     } else if (month == 10 && day >= 23 || month == 11 && day <= 21) {
         symbol = "Scorpio";
         document.getElementById("symbol").src = "img/scorpio.png";
         x = definition.Scorpio;
-        document.getElementById("daily-horoscope").innerHTML = x;
+        document.getElementById("horoscope").innerHTML = x;
     } else if (month == 11 && day >= 22 || month == 12 && day <= 21) {
         symbol = "Sagittarius";
         document.getElementById("symbol").src = "img/sagittarius.png";
         x = definition.Sagittarius;
-        document.getElementById("daily-horoscope").innerHTML = x;
+        document.getElementById("horoscope").innerHTML = x;
     } else if (month == 12 && day >= 22 || month == 1 && day <= 19) {
         symbol = "Capricorn";
         document.getElementById("symbol").src = "img/capricorn.png";
         x = definition.Capricorn;
-        document.getElementById("daily-horoscope").innerHTML = x;
+        document.getElementById("horoscope").innerHTML = x;
     }
 
-    zodiac = symbol;
-    console.log(zodiac);
+    console.log(symbol);
 
     if (month == 2 && day > 28) {
         h4.innerHTML = "Hello, unfortunately this is not a valid date of birth. Please try again."

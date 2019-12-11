@@ -109,6 +109,7 @@ function signs() {
     if (month == 2 && day > 28) {
         h4.innerHTML = "Hello, unfortunately this is not a valid date of birth. Please try again."
         x = definition.Error;
+        alert("Error: Incorrect Birthday");
     } else if (month == birthmonth && day == birthday) {
         h4.innerHTML = "Happy Birthday " + name + "!";
     } else {

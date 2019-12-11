@@ -111,6 +111,6 @@ function signs() {
     } else if (month === birthmonth && day === birthday) {
         h4.innerHTML = "Happy Birthday " + name + "!";
     } else {
-        h4.innerHTML = "Hello " + name + ", your sign is " + zodiac + ".";
+        h4.innerHTML = "Hello " + name + ", your sign is " + symbol + ".";
     }
 }

@@ -1,14 +1,14 @@
-html, 
+html,
 body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-h1, 
+h1,
 h2,
 h3,
-h4, 
+h4,
 h5,
 h6,
 label {
@@ -21,10 +21,15 @@ label {
     font-size: 1.65rem;
 }
 
-#daily-horoscope {
+#horoscope {
     color: white;
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
     font-size: 1.2rem;
+}
+
+/* BACKGROUND IMAGE */
+#background {
+    background-image: url('../img/background.jpg');
 }
 
 /* LINKS */
@@ -36,23 +41,16 @@ a:hover{
     color: fuchsia;
 }
 
-/* BACKGROUND IMAGE */
-#background {
-    background-image: url('../img/background.jpg');
-}
-
 /* TOP OF PAGE */
-.jumbotron {
+.top {
     background: transparent;
     border-bottom: solid 1px transparent;
 }
 
-/* ZODIAC SIGN */
 #symbol {
     max-width: 20%;
 }
 
-/* SIGN HEADER */
 #userinfo {
     border-bottom: solid 1px transparent;
 }

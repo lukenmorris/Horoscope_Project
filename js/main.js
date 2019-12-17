@@ -30,8 +30,11 @@ function signs() {
 
     h3.innerHTML = "Your Birthday: " + month + "/" + day;
     if (month == 2 && day > 28 || ((month == 9 || month == 4 || month == 6 || month == 11) && day == 31)) {
-        h4.innerHTML = "Hello, unfortunately this is not a valid date of birth. Please try again."
+        h4.innerHTML = "Hello, unfortunately this is not a valid date of birth. Please try again.";
+        h3.innerHTML = "";
         x = definition.Error;
+        document.getElementById("horoscope").innerHTML = x;
+        document.getElementById("symbol").src = "";
         alert("Error: Incorrect Birthday");
         return false;
     } else if (month == 0 || day == 0 || name == '') {

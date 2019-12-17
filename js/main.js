@@ -27,16 +27,14 @@ function signs() {
     var h3 = document.querySelector('h3');
     var h4 = document.querySelector('h4');
 
+
+    h3.innerHTML = "Your Birthday: " + month + "/" + day;
     if (month == 2 && day > 28 || ((month == 9 || month == 4 || month == 6 || month == 11) && day == 31)) {
         h4.innerHTML = "Hello, unfortunately this is not a valid date of birth. Please try again."
         x = definition.Error;
         alert("Error: Incorrect Birthday");
         return false;
-    }
-
-    h3.innerHTML = "Your Birthday: " + month + "/" + day;
-
-    if (month == 0 || day == 0 || name == '') {
+    } else if (month == 0 || day == 0 || name == '') {
         alert("Error: All fields must be filled out. Please try again.");
         h3.innerHTML = "";
         x = definition.Error;
